@@ -71,3 +71,5 @@
   "created_at": "2018-08-23T02:34:45Z",
   "updated_at": "2020-07-17T05:58:04Z"
 }
+
+npm init 初始化项目，生成package.json文件
