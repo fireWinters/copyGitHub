@@ -21,10 +21,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GithubApiService = void 0;
 var request = __importStar(require("request"));
+var User_1 = require("./User");
 var options = {
     headers: {
         'User-Agent': 'request'
-    }
+    },
+    json: true
 };
 var GithubApiService = /** @class */ (function () {
     function GithubApiService() {
@@ -34,6 +36,8 @@ var GithubApiService = /** @class */ (function () {
         request
             .get('https://api.github.com/users/' + useName, options, function (error, response, body) {
             console.log(body);
+            var user = new User_1.User(body);
+            console.log(user);
         });
     };
     return GithubApiService;

@@ -81,4 +81,13 @@ npm install request --save
 headers: {
         'User-Agent': 'request'
     }
-    增加后请求对应的API地址即不报错
+增加后请求对应的API地址即不报错
+使用插件格式化输出的json
+
+解决定义user类如下书写报错问题，一按照提示写构造函数，一种是修改tsconfig.json文件中"strictPropertyInitialization": false, 
+export class User{
+    login:string;
+    fullName:string;
+    repoCount:number;
+    followerCount:number;
+}
