@@ -91,3 +91,5 @@ export class User{
     repoCount:number;
     followerCount:number;
 }
+
+参考视频进行对应接口调用，网络稳定接口调用成功，代码正确
