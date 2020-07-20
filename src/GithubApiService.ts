@@ -1,5 +1,6 @@
 import * as request from 'request';
 import { User } from './User';
+import { Repo } from './Repo';
 const options = {
     headers: {
         'User-Agent': 'request'
@@ -14,6 +15,14 @@ export class GithubApiService{
             console.log(body);
             let user:User = new User(body);
             cb(user);
+        })
+    }
+
+    getRepos(useName:string,cb:(repos:Repo[])=>any){
+        request
+        .get('https://api.github.com/users/'+ useName +'/repos', options,(error:any,response:any,body:any) => {
+            let repos:Repo[] = body.map((repo:any)=>new Repo(repo));
+            cb(repos);
         })
     }
 }

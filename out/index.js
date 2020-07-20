@@ -6,3 +6,6 @@ svc.getUserInfo('fireWinter', function (user) {
     console.log(user);
     console.log('name:', user.login);
 });
+svc.getRepos('fireWinter', function (repos) {
+    console.log(repos);
+});
