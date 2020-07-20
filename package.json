@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/fireWinters/copyGitHub/issues"
   },
-  "homepage": "https://github.com/fireWinters/copyGitHub#readme"
+  "homepage": "https://github.com/fireWinters/copyGitHub#readme",
+  "devDependencies": {
+    "@types/request": "^2.48.5"
+  },
+  "dependencies": {
+    "request": "^2.88.2"
+  }
 }
