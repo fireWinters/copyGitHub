@@ -8,12 +8,12 @@ const options = {
 };
 export class GithubApiService{
     //https://api.github.com/users/fireWinter
-    getUserInfo(useName:string){
+    getUserInfo(useName:string,cb:(user:User)=>any){
         request
         .get('https://api.github.com/users/'+ useName, options,(error:any,response:any,body:any) => {
             console.log(body);
             let user:User = new User(body);
-            console.log(user);
+            cb(user);
         })
     }
 }

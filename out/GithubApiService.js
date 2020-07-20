@@ -32,12 +32,12 @@ var GithubApiService = /** @class */ (function () {
     function GithubApiService() {
     }
     //https://api.github.com/users/fireWinter
-    GithubApiService.prototype.getUserInfo = function (useName) {
+    GithubApiService.prototype.getUserInfo = function (useName, cb) {
         request
             .get('https://api.github.com/users/' + useName, options, function (error, response, body) {
             console.log(body);
             var user = new User_1.User(body);
-            console.log(user);
+            cb(user);
         });
     };
     return GithubApiService;
