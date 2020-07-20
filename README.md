@@ -76,3 +76,9 @@ npm init 初始化项目，生成package.json文件
 在目录区域空白地方右击鼠标，选择打开在终端，执行命令tsc --init，初始化ts的json文件
 安装请求API的库，例axios,或者request， npm install @types/request --save-dev,
 npm install request --save
+
+执行npm start 报错，需要增加请求头信息，具体代码是
+headers: {
+        'User-Agent': 'request'
+    }
+    增加后请求对应的API地址即不报错
