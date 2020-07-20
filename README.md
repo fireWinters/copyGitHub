@@ -73,3 +73,4 @@
 }
 
 npm init 初始化项目，生成package.json文件
+在目录区域空白地方右击鼠标，选择打开在终端，执行命令tsc --init，初始化ts的json文件
