@@ -95,3 +95,5 @@ export class User{
 参考视频进行对应接口调用，网络稳定接口调用成功，代码正确
 为了排序安装对应的库 npm install lodash --save,
 并同时安装对应的依赖文件 npm install @types/lodash --save-dev
+获取命令行参数npm start 用户名
+node.js内置对象process.argv中第三个参数是用户名，利用这个可以得到用户名

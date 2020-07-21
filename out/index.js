@@ -30,6 +30,8 @@ var svc = new GithubApiService_1.GithubApiService();
 //     console.log(repos);
 // })
 //上面是两个分开写，进行请求。还有的需求的场景是只有得到用户信息才进行仓库的请求
+// node.js内置对象
+console.log(process.argv);
 svc.getUserInfo('fireWinter', function (user) {
     console.log(user);
     console.log('name:', user.login);
