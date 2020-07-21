@@ -1,6 +1,7 @@
 import { GithubApiService} from './GithubApiService';
 import { User } from './User';
 import { Repo } from './Repo';
+import * as _ from 'lodash'
 let svc:GithubApiService = new GithubApiService ();
 // svc.getUserInfo('fireWinter',(user:User)=>{
 //     console.log(user);
@@ -14,7 +15,9 @@ svc.getUserInfo('fireWinter',(user:User)=>{
     console.log(user);
     console.log('name:',user.login);
     svc.getRepos(user.login,(repos:Repo[])=>{
-        user.repos = repos;
+        // let sortedRepos = _.sortBy(repos,[(repo:Repo)=>repo.size]);//正序
+        let sortedRepos = _.sortBy(repos,[(repo:Repo)=>repo.size*-1]);//倒序
+        user.repos = sortedRepos;
         console.log(user);
     })
 });
